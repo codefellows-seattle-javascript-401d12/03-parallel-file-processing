@@ -1,0 +1,33 @@
+{
+  "name": "03-parallel-file-processing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdih17/03-parallel-file-processing.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abdih17/03-parallel-file-processing/issues"
+  },
+  "homepage": "https://github.com/abdih17/03-parallel-file-processing#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^3.0.1",
+    "gulp-mocha": "^3.0.1",
+    "mocha": "^3.2.0",
+    "stream": "0.0.2"
+  },
+  "dependencies": {
+    "mocha": "^3.2.0"
+  }
+}
