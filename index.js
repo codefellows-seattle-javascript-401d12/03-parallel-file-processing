@@ -1,6 +1,6 @@
 'use strict';
 
 const fs = require('fs');
-const readFile = require('./lib/read-file.js');
+const fileReader = require('./lib/read-file.js');
 
-readFile.fileReader();
+fileReader();
