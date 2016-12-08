@@ -12,13 +12,14 @@ describe('Index: index.js', function() {
       const expectedResult = [
         '6f6e652e74787420',
         '74776f2e74787420',
-        '74687265652e7478'
-      ].join('\n').trim();
+        '74687265652e7478',
+        ''
+      ].join('\n');
 
       // exec('node index.js', function(err, stdout, stderr) {
       exec('node index.js', function(err, stdout) {
         expect(err).to.not.be.an('error');
-        expect(stdout.trim()).to.equal(expectedResult);
+        expect(stdout).to.equal(expectedResult);
         done();
       });
     });
