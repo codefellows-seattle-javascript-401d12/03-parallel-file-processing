@@ -19,6 +19,7 @@
   "homepage": "https://github.com/bhavyaab/03-parallel-file-processing#readme",
   "devDependencies": {
     "chai": "^3.5.0",
+    "gulp": "^3.9.1",
     "mocha": "^3.2.0",
     "mocha-eslint": "^3.0.1"
   }
