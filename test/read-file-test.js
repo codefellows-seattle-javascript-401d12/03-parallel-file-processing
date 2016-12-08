@@ -17,21 +17,10 @@ describe('Read File', function() {
     });
   });
 
-  // describe('has the wrong file path', function() {
-  //   it('should return an error', function(done) {
-  //     readFile(`${__dirname}/nonexistent-text-file.txt`, function(err) {
-  //       expect(err).to.be.an('error');
-  //       done();
-  //     });
-  //   });
-  // });
-
-  describe('with a proper file path', function() {
-    it('should return the file contents', function(done) {
-      readFile(`${__dirname}/../data/one.txt`, function(err, data) {
-        expect(err).to.equal(null);
-        expect(data).to.be.a('string');
-        done();
+  describe('has the wrong file path', function() {
+    it('should return an error', function() {
+      readFile(`${__dirname}/nonexistent-text-file.txt`, function(err) {
+        expect(err).to.be.an('error');
       });
     });
   });
