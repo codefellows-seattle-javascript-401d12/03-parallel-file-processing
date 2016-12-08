@@ -1,16 +1,7 @@
 'use strict';
 
-const fs = require('fs');
+const readFile = require('./lib/read-file');
 
-fs.readFile(`${__dirname}/data/one.txt`, function(err, data){
-  if (err) throw err;
-  console.log('1:', data.toString('hex', 0, 8));
-  fs.readFile(`${__dirname}/data/two.txt`, function(err, data){
-    if (err) throw err;
-    console.log('2:', data.toString('hex', 0, 8));
-    fs.readFile(`${__dirname}/data/three.txt`, function(err, data){
-      if (err) throw err;
-      console.log('3:', data.toString('hex', 0, 8));
-    });
-  });
+readFile(function(data) {
+  console.log('Output of data:', data);
 });
