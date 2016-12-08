@@ -17,15 +17,5 @@ reader('three.txt', function(err, data) {
   console.log('#3 is: ', data);
 });
 
-
-
-// code below brough in from day 2 lab
-
-// const greet = require('./lib/greetings.js');
-//
-// process.argv.forEach((val, index) => {
-//   console.log(`${index}: ${val}`);
-// });
-//
-// greet.sayHello('Scott');
-// greet.sayGoodbye();
+// note to self: would like to array and loop through one fuction calling each file
+// gio gave go ahead to leave three calls for now
