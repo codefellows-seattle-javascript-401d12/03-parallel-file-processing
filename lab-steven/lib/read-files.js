@@ -3,6 +3,7 @@
 const fs = require('fs');
 
 const fileReader = module.exports = function(fileArray, callback) {
+  if (!fileArray) throw new Error('You didn\'t pass in any file paths.');
   var arrayOfHexes = [];
   fs.readFile(fileArray[0], function(err, data) {
     if (err) return callback(err);
