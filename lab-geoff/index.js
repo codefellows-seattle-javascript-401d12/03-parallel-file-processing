@@ -2,20 +2,17 @@
 
 const fileReader = require('./lib/file-reader.js');
 
-// Because files are loading async, we need to
-// nest all the calls to enforce the order.
-fileReader.firstEightAsHex(`${__dirname}/data/one.txt`, function(err, data) {
-  if(err) throw err;
-  console.log(data);
-  fileReader.firstEightAsHex(`${__dirname}/data/two.txt`, function(err, data) {
+const path = `${__dirname}/data`;
+
+function work(q) {
+  if(q.length === 0) return; //We are all done.
+  var file = q.shift();
+  fileReader.firstEightAsHex(`${path}/${file}`, function(err, data) {
     if(err) throw err;
     console.log(data);
-    fileReader.firstEightAsHex(`${__dirname}/data/three.txt`, function(err, data) {
-      if(err) throw err;
-      console.log(data);
-    });
+    work(q);
   });
-});
+}
 
-//NOTE: It's probably possible to rewrite the nested tree as
-//      a recursive function that might be a bit nicer to look at.
+// Q: Is it better practice to move this call above the function declaration?
+work(['one.txt', 'two.txt', 'three.txt']);
