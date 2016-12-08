@@ -1,7 +1,7 @@
 'use strict';
 
-const readFile = require('./lib/read-file');
+const readFiles = require('./lib/read-file');
 
-readFile(function(data) {
+readFiles(function(data) {
   console.log('Output of data:', data);
 });
