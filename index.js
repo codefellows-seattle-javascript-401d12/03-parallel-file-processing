@@ -6,4 +6,9 @@ var poemData = 'data/one.txt'
 
 var poemFiles = [`${__dirname}/data/one.txt`, `${__dirname}/data/two.txt`, `${__dirname}/data/three.txt`];
 
-truncate.truncatePoem(poemFiles[1]);
+poemFiles.forEach(
+  function(filePath) {
+    console.log(filePath);
+    truncate.truncatePoem(filePath);
+  }
+);
