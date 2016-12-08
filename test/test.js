@@ -10,27 +10,30 @@ describe('Read File', function() {
     afterEach('add one to files iterator', function() {
       return i++;
     });
-    it(`should return the contents of file ${files[i]}`, function(done) {
+    it(`should return the first 8 bytes of file ${files[0]}`, function(done) {
       fileReader(`${__dirname}/../data/${files[i]}`, function(err, data) {
         console.log('file:', files[i]);
         console.log('data', data.toString());
         expect(err).to.equal(null);
+        expect(data).to.be.a('string');
         done();
       });
     });
-    it(`should return the contents of file ${files[i]}`, function(done) {
+    it(`should return the first 8 bytes of file ${files[1]}`, function(done) {
       fileReader(`${__dirname}/../data/${files[i]}`, function(err, data) {
         console.log('file:', files[i]);
         console.log('data', data.toString());
         expect(err).to.equal(null);
+        expect(data).to.be.a('string');
         done();
       });
     });
-    it(`should return the contents of file ${files[i]}`, function(done) {
+    it(`should return the first 8 bytes of file ${files[2]}`, function(done) {
       fileReader(`${__dirname}/../data/${files[i]}`, function(err, data) {
         console.log('file:', files[i]);
         console.log('data', data.toString());
         expect(err).to.equal(null);
+        expect(data).to.be.a('string');
         done();
       });
     });
