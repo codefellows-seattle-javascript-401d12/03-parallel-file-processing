@@ -3,15 +3,6 @@
 const expect = require('chai').expect;
 const fileReader = require('../lib/file-reader.js');
 
-// I used the bash command: xxd -p filename | head -c 16
-// to determine the expected results from a known
-// utility.
-const xxd = [
-  '6f6e652e74787420',
-  '74776f2e74787420',
-  '74687265652e7478'
-];
-
 describe('File Reader: lib/file-reader.js', function() {
   describe('#readContentsAsString', function() {
     it('should return some content', function(done) {
@@ -44,7 +35,7 @@ describe('File Reader: lib/file-reader.js', function() {
       var path = 'data/one.txt';
       fileReader.firstEightAsHex(path, function(err, data) {
         expect(err).to.not.be.an('error');
-        expect(data).to.equal(xxd[0]);
+        expect(data).to.equal('6f6e652e74787420');
         done();
       });
     });
