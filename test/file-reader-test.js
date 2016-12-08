@@ -4,7 +4,7 @@ const fs = require('fs');
 const expect = require('chai').expect;
 const fileReader = require('../lib/file-reader.js');
 
-describe('Files', function(){
+describe('Three Files', function(){
   describe('read files asynchronously?', function(){
     var threeFileData = [];
     before( function(done){
@@ -21,7 +21,7 @@ describe('Files', function(){
     });
   });
 
-  it('should read the files in order', function(done){
+  it('should read the files in order, and provide the first 8 bytes of each file', function(done){
     fileReader([`${__dirname}/../data/one.txt`, `${__dirname}/../data/two.txt`, `${__dirname}/../data/three.txt`], function(err, data){
       expect(err).to.equal(null);
       expect(data).to.equal('something?');
