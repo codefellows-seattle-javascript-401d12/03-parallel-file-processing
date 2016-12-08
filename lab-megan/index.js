@@ -4,7 +4,17 @@ const reader = require('./lib/files-reader.js');
 
 reader('one.txt', function(err, data) {
   if (err) throw err;
-  console.log(data);
+  console.log('#1 is: ', data);
+});
+
+reader('two.txt', function(err, data) {
+  if (err) throw err;
+  console.log('#2 is: ', data);
+});
+
+reader('three.txt', function(err, data) {
+  if (err) throw err;
+  console.log('#3 is: ', data);
 });
 
 
