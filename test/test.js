@@ -35,7 +35,4 @@ describe('Read File', function() {
       });
     });
   });
-  describe('', function(){
-
-  });
 });
