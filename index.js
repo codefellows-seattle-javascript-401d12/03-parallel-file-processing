@@ -1,16 +1,16 @@
 'use strict';
 
-const fs = require('fs');
+const fileReader = require('./lib/file-reader.js');
 
-fs.readFile(`${__dirname}/data/one.txt`, function(err, data) {
+fileReader(`${__dirname}/data/one.txt`, function(err, data) {
   if (err) throw err;
-  console.log('content of the first file is:', data.toString('hex', 0, 8));
-  fs.readFile(`${__dirname}/data/two.txt`, function(err, data) {
+  console.log('content of the first file is:', data);
+  fileReader(`${__dirname}/data/two.txt`, function(err, data) {
     if (err) throw err;
-    console.log('content of the second file is:', data.toString('hex', 0, 8));
-    fs.readFile(`${__dirname}/data/three.txt`, function(err, data) {
+    console.log('content of the second file is:', data);
+    fileReader(`${__dirname}/data/three.txt`, function(err, data) {
       if (err) throw err;
-      console.log('content of the third file is:', data.toString('hex', 0, 8));
+      console.log('content of the third file is:', data);
     });
   });
 });
