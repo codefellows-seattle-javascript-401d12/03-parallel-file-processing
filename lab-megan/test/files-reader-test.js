@@ -6,6 +6,16 @@ const fileReader = require('../lib/files-reader.js');
   // my own testing block
 describe('test reading three files from data folder', function() {
 
+  describe('test for incorrect file path', function() {
+    it('should return an error', function() {
+      fileReader('/../data/doesnotexist.txt', function(err, data) {
+        expect(err).to.exist;
+        expect(data).to.not.exist;
+        done();
+      });
+    });
+  });
+
   describe('test reading file one', function () {
     it('should return the first 8 bytes in hex', function(done) {
       // keep line below for later reference
@@ -36,17 +46,6 @@ describe('test reading three files from data folder', function() {
         expect(err).to.be.equal(null);
         expect(data).to.be.a('string');
         expect(data).to.have.length(16);
-        done();
-      });
-    });
-  });
-
-  // testing handling errors
-  describe('test getting an error', function() {
-    it('should return an error', function(done) {
-      fileReader('/../data/errortest.txt', function(err, data) {
-        expect(err).to.exist;
-        expect(data).to.not.exist;
         done();
       });
     });
