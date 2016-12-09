@@ -2,6 +2,8 @@
 
 const fs = require('fs');
 
+var theResults = ['one', 'two', 'three'];
+
 // the code below is copied from the demo files, don't worry I typed it out
 const fileReader = module.exports = function(fileName, callback) {
   fs.readFile(`${__dirname}/../data/one.txt`, function(err, data) {
@@ -17,6 +19,7 @@ const fileReader = module.exports = function(fileName, callback) {
       });
     });
   });
+  console.log('#1 is ', theResults[0], ' #2 is ', theResults[1], ' #3 is ', theResults[2]);
 };
 
 // did not reach point of doing the below because of time
