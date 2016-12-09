@@ -22,7 +22,7 @@ describe('testing File Reader Module', function() {
       done();
     });
     it('should have correct string order', (done) => {
-      var expectedResult = [];
+      var expectedResult = ['4c65742069742073', '4d616b6520436872', '57696e6e65722057'];
       fileReader(this.paths, function(err, data) {
         expect(err).to.equal(null);
         expect(data[0]).to.equal(expectedResult[0]);
