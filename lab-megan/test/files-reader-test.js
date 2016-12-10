@@ -16,7 +16,7 @@ describe('test reading files from data folder', function() {
     });
   });
 
-  describe('testing file 1', function () {
+  describe('testing file one', function () {
     it('should return the first 8 bytes in hex', function(done) {
       // keep line below for later reference
       // fileReader(`${__dirname}/../data/one.txt`, function(err, data) {
@@ -40,7 +40,7 @@ describe('test reading files from data folder', function() {
     });
   });
 
-  describe('testing file two', function() {
+  describe('testing file three', function() {
     it('should return the first 8 bytes in hex', function(done) {
       fileReader('/../data/three.txt', function(err, data) {
         expect(err).to.be.equal(null);
