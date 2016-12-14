@@ -1,0 +1,16 @@
+{
+  "name": "lab03-kyler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
