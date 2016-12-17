@@ -15,15 +15,14 @@ describe('test reading files from data folder', function() {
     });
   });
 
-  describe('testing order of results', function() {
-    it('should return the results in the correct order', function(done) {
+  describe('testing order of results', function(done) {
+    it('should return the results in the correct order', function() {
       var testResults = ['313a205468697320', '323a205468697320', '333a205468697320'];
-      // reader (function(data) { // NOPE
-      reader (function(err, data) {
+      reader (function(data) {
         expect(data[0]).to.equal(testResults[0]);
         expect(data[1]).to.equal(testResults[1]);
         expect(data[2]).to.equal(testResults[2]);
-        console.log('::: inside test, the data results are: ', data);
+        // console.log('::: inside test, the data results are: ', data);
         done();
       });
     });

@@ -13,9 +13,8 @@ const fileReader = module.exports = function(callback) {
       fs.readFile(`${__dirname}/../data/three.txt`, function(err, data) {
         if (err) return callback(err);
         theResults.push(data.toString('hex',0,8));
-        console.log('\n::: the final results are: ', theResults);
+        // console.log('\n::: the final results are: ', theResults);
         callback(null, theResults);
-        // callback(theResults);
       });
     });
   });

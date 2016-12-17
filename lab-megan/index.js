@@ -4,11 +4,5 @@ const reader = require('./lib/files-reader.js');
 
 reader(function(err, data) {
   if (err) return err;
-  console.log('::: In index file, your files are: ', data);
+  console.log('The result of reading your three files is:', data);
 });
-
-// below is NOPE
-// reader(function(data) {
-//   // if (err) return err;
-//   console.log('::: In index file, your files are: ', data);
-// });
